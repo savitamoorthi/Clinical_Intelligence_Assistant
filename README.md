@@ -296,7 +296,7 @@ Results are saved as CSV files in the `test/` directory.
 - **Database Access**: Local SQLite prevents unauthorized network access
 - **Input Sanitization**: SQL injection protection via parameterized queries
 
-⚠️ **HIPAA Compliance Note:** This is a research prototype using the publicly available MIMIC-III dataset. Do not use with real patient data without proper authorization and security review.
+**HIPAA Compliance Note:** This is a research prototype using the publicly available MIMIC-III dataset. Do not use with real patient data without proper authorization and security review.
 
 ---
 

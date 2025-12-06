@@ -13,7 +13,7 @@ The **Clinical Intelligence Assistant** is an advanced multi-agent AI system des
 ### Key Features
 
 - **Multi-Agent Architecture**: Orchestrated workflow using LangGraph with three specialized agents:
-  - **EHR Agent**: Text-to-SQL system for querying structured MIMIC-III database
+  - **EHR Agent**: Text-to-SQL system for querying structured MIMIC-IV database
   - **Reports Agent**: Vector-based retrieval for unstructured clinical documents (radiology reports)
   - **Supervisor Agent**: Intelligent coordinator managing agent collaboration and response synthesis
 
@@ -53,7 +53,7 @@ The **Clinical Intelligence Assistant** is an advanced multi-agent AI system des
            │                 │
            ▼                 ▼
     ┌──────────────┐  ┌──────────────┐
-    │  MIMIC-III   │  │   Zilliz     │
+    │  MIMIC-IV    │  │   Zilliz     │
     │   SQLite     │  │  Vector DB   │
     └──────────────┘  └──────────────┘
 ```
@@ -68,7 +68,7 @@ The **Clinical Intelligence Assistant** is an advanced multi-agent AI system des
 - OpenAI GPT-4 (Alternative LLM)
 - Sentence Transformers (Embeddings)
 - Zilliz Cloud (Vector Database)
-- SQLite (MIMIC-III Database)
+- SQLite (MIMIC-IV  Database)
 - NetworkX (Schema Graph)
 - RAGAS (Evaluation Framework)
 
@@ -79,7 +79,7 @@ The **Clinical Intelligence Assistant** is an advanced multi-agent AI system des
 - Axios/HTTP Client
 
 **Data:**
-- MIMIC-III Clinical Database
+- MIMIC-IV Clinical Database
 - Custom medical ontology (ICD codes, metrics, concepts)
 
 ---
@@ -106,7 +106,7 @@ Clinical_Intelligence_Assistant/
 │   └── rules.yaml                  # Query generation rules
 │
 ├── data/                           # Data storage
-│   ├── mimic.db                    # MIMIC-III SQLite database
+│   ├── mimic.db                    # MIMIC-IV SQLite database
 │   └── raw/                        # Raw data files
 │
 ├── db_loader/                      # Database utilities
@@ -296,7 +296,7 @@ Results are saved as CSV files in the `test/` directory.
 - **Database Access**: Local SQLite prevents unauthorized network access
 - **Input Sanitization**: SQL injection protection via parameterized queries
 
-**HIPAA Compliance Note:** This is a research prototype using the publicly available MIMIC-III dataset. Do not use with real patient data without proper authorization and security review.
+**HIPAA Compliance Note:** This is a research prototype using the publicly available MIMIC-IV dataset. Do not use with real patient data without proper authorization and security review.
 
 ---
 
@@ -349,7 +349,7 @@ This is an academic project for educational purposes.
 ## Acknowledgments
 
 - University of Chicago MSADS faculty and advisors
-- MIT Laboratory for Computational Physiology (MIMIC-III dataset)
+- MIT Laboratory for Computational Physiology (MIMIC-IV dataset)
 - LangChain and LangGraph communities
 - Open-source contributors to all dependencies
 

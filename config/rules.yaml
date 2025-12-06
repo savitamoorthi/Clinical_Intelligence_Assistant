@@ -1,0 +1,26 @@
+# --- SYSTEM CONFIGURATION ---
+security:
+  row_limit_default: 100
+  pii_mask_columns:
+    - patients.subject_id
+    - admissions.subject_id
+
+# --- KEYWORD EXPANSION (Used by Retriever/Router) ---
+synonyms:
+  los: ["length of stay", "duration", "days in hospital"]
+  expire: ["died", "death", "mortality", "passed away"]
+  admittime: ["admission date", "date of admission"]
+
+# --- LLM PROMPT INSTRUCTIONS (Used by SQL Generator) ---
+global_instructions:
+  - "When querying for a specific patient, ALWAYS include `subject_id`, `hadm_id`, and relevant dates (`admittime`, `chartdate`)."
+  - "If the user asks for specific attributes (types, locations, dispositions), you MUST add those columns to the SELECT clause."
+  - "You CANNOT access radiology report text or 'Notes'. Ignore requests for 'summaries'."
+
+column_mappings:
+  discharge_disposition: "Map 'Discharge Disposition', 'Status', or 'Where they went' to `discharge_location` in the `admissions` table."
+  admission_type: "Map 'Admission Type' to `admission_type` in the `admissions` table."
+  mortality: "Map 'Death', 'Died', or 'Mortality' to `hospital_expire_flag` (1=died) or `deathtime`."
+  diagnoses: "To find Diagnosis Names (e.g. Sepsis), use table `d_icd_diagnoses` and column `long_title`."
+  procedures: "To find Procedure Names (e.g. Biopsy), use table `d_icd_procedures` and column `long_title`."
+  labs_vitals: "To find Lab/Vital Item Names, use table `d_items` or `d_labitems` and column `label`."

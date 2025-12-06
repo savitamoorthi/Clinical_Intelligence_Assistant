@@ -1,0 +1,98 @@
+[
+  {
+    "id": "Q-01",
+    "type": "Unstructured (Vector)",
+    "question": "Summarize the findings regarding the liver and spleen for patient 10000032 based on the radiology reports.",
+    "ground_truth": "Longitudinal analysis of liver and spleen findings from reports dated 2180-05-06 to 2180-08-06:Liver: Consistently described as having a coarsened and nodular echotexture compatible with cirrhosis. A solid nodule in the left lobe was identified, measuring approximately 3.3 x 2.7 cm on 06-26 and 2.9 x 3.6 cm on 08-06, described as stable. The main portal vein remains patent with hepatopetal flow. Ascites progressed from 'small amount' (05-06) to 'moderate volume' (08-06).Spleen: Consistently enlarged (splenomegaly) with normal/homogeneous echotexture. Size fluctuated slightly: 13.5 cm (05-06), 11.9 cm (06-26), and 12.6 cm (08-06)."
+  },
+  {
+    "id": "Q-02",
+    "type": "Unstructured (Vector)",
+    "question": "Based on the Chest radiology report with Note ID 10000032-RR-14, is there any evidence of acute infectious process?",
+    "ground_truth": "No. The specific Chest X-ray report from Note ID 10000032-RR-14 confirms the absence of acute infectious processes. The text explicitly states: 'there is no focal consolidation, pleural effusion or pneumothorax', indicating a clean image and supporting a negative diagnosis."
+  },
+  {
+    "id": "Q-03",
+    "type": "Unstructured (Vector)",
+    "question": "Compare the liver findings for Patient 10000032 between the scan with Note ID 10000032-RR-15 and the scan with Note ID 10000032-RR-47. Did any focal lesions appear in the later scan?",
+    "ground_truth": "Yes, there is a significant interval change between the two specific reports:Scan 1 (RR-15): Explicitly documented 'There is no focal liver mass.Scan 2 (RR-47): Identified a 'solid nodule in the left lobe of the liver measuring 2.9 x 2.9 3.6 cm'.Conclusion: A focal lesion (solid nodule) appears in the later scan that was not present in the earlier scan."
+  },
+  {
+    "id": "Q-04",
+    "type": "Unstructured (Vector)",
+    "question": "The report with Note ID 10000032-RR-46 mentions 'old left rib fractures' for Patient 10000032. Is this considered an acute finding?",
+    "ground_truth": "No. The report explicitly describes the findings as 'old left rib fractures' and the final impression states 'no acute cardiopulmonary process', thereby classifying the injury as a chronic, non-acute finding."
+  },
+  {
+    "id": "Q-05",
+    "type": "Unstructured (Vector)",
+    "question": "Patient 10000032 underwent multiple paracentesis procedures. What is the consistent indication mentioned in the reports?",
+    "ground_truth": "The consistent indication for paracentesis is clearly documented across multiple reports as the management of 'Cirrhosis, ascites despite diuretics', often requiring repeated 'large-volume paracentesis' due to recurrent fluid buildup."
+  },
+  {
+    "id": "Q-06",
+    "type": "Unstructured (Vector)",
+    "question": "The report with Note ID 10000032-RR-47 mentions 'elevated alk phos' in the indication. Does the scan show biliary ductal dilation?",
+    "ground_truth": "No. Although 'elevated alk phos' is noted in the clinical indication, the report explicitly states the definitive negative finding regarding the bile ducts, confirming the absence of obstruction."
+  },
+  {
+    "id": "Q-07",
+    "type": "Unstructured (Vector)",
+    "question": "Identify the technique used in the report with Note ID 10000032-RR-15 for Patient 10000032.",
+    "ground_truth": "The technique utilized in the report was specifically 'grey scale and color doppler ultrasound images of the abdomen were obtained'. This confirms the use of non-invasive vascular flow analysis."
+  },
+  {
+    "id": "Q-08",
+    "type": "Unstructured (Vector)",
+    "question": "For patient 10039708, is there any mention of a 'pulmonary embolism' in their radiology notes?",
+    "ground_truth": "No, search negative. A comprehensive text search across all 92 reports for patient 10039708 for the keywords 'pulmonary embolism' or 'PE' did not yield a positive result."
+  },
+  {
+    "id": "Q-09",
+    "type": "Unstructured (Vector)",
+    "question": "Summarize the findings regarding the bones or spine for patient 10021487 in one of their latest reports.",
+    "ground_truth": "The latest reports for patient 10021487 show findings related to cervical spine fractures (C6 vertebral body, facet joints) with descriptions of alignment, anterolisthesis, and no new acute findings. Reports may also mention lumbar spine findings including levoscoliosis and transverse process fractures."
+  },
+  {
+    "id": "Q-10",
+    "type": "Unstructured (Vector)",
+    "question": "For patient 10039708, check a random report for 'pneumonia' and verify if the radiologist mentions a 'viral' vs 'bacterial' etiology.",
+    "ground_truth": "The radiologist found 'no radiographic evidence of pneumonia'. Since the finding is negative, no specific etiology (viral vs. bacterial) is discussed in the report, maintaining diagnostic ambiguity."
+  },
+  {
+    "id": "Q-11",
+    "type": "Unstructured (Vector)",
+    "question": "In the chest reports for patient 10021487, is there any description of 'pulmonary edema' and what associated mechanical feature is mentioned?",
+    "ground_truth": "Yes, pulmonary edema is described in multiple reports for patient 10021487. Associated mechanical features mentioned include: endotracheal tube, feeding tube, orogastric tube, and right IJ central venous line. These indicate the patient was mechanically ventilated."
+  },
+  {
+    "id": "Q-12",
+    "type": "Unstructured (Vector)",
+    "question": "For patient 10039708, find the earliest recorded radiology report and state its primary finding. If multiple reports share the earliest timestamp, select the report with the alphabetically earliest Note ID.",
+    "ground_truth": "The earliest recorded report for this patient is dated 2138-10-30 20:12:00. The primary finding in this initial scan was 'LIVER: The hepatic parenchyma appears within normal limits'."
+  },
+  {
+    "id": "Q-13",
+    "type": "Unstructured (Vector)",
+    "question": "In patient 10002428's reports, is there evidence of severe COPD, such as hyperinflation or bullae?",
+    "ground_truth": "Yes, the report strongly suggests emphysema (a severe form of COPD). The text mentions that focal findings are difficult to assess 'due to airway obstruction or emphysema', confirming chronic lung pathology is present or strongly suspected."
+  },
+  {
+    "id": "Q-14",
+    "type": "Unstructured (Vector)",
+    "question": "Do any reports for patient 10021487 mention quantitative measures such as 'Hounsfield units' or 'SUV max'?",
+    "ground_truth": "No, search negative. A thorough search across all 71 reports for patient 10021487 confirms that specific quantitative AI/radiomic metrics like 'Hounsfield units' or 'SUV max' are not mentioned in the text."
+  },
+  {
+    "id": "Q-15",
+    "type": "Unstructured (Vector)",
+    "question": "In one of patient 10035631's reports, is the finding labeled 'indeterminate' or 'equivocal'? If so, quote the ambiguity.",
+    "ground_truth": "No ambiguity found. Text search did not locate terms like 'indeterminate' or 'equivocal' in the reports for this patient."
+  },
+  {
+    "id": "Q-16",
+    "type": "Unstructured (Vector)",
+    "question": "For patient 10003400, compare the earliest and latest chest reports. Did the size of the heart change?",
+    "ground_truth": "No significant change/Stable. (The heart size was already enlarged in the earliest report and was documented as 'stable' in the latest report, meaning no interval increase.)"
+  }
+]

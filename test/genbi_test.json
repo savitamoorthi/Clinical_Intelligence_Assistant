@@ -1,0 +1,98 @@
+[
+  {
+    "id": "Q-01",
+    "type": "Structured (SQL)",
+    "question": "What is the gender and anchor age of patient 10000032?",
+    "ground_truth": "Gender: F, Anchor Age: 52"
+  },
+  {
+    "id": "Q-02",
+    "type": "Structured (SQL)",
+    "question": "List all admission and discharge dates for patient 10000032 and their discharge locations.",
+    "ground_truth": "The patient had 4 admissions. Verified Raw Data:\n1. 2180-05-06 22:23:00 ~ 2180-05-07 17:15:00 (Discharge: HOME)\n2. 2180-06-26 18:27:00 ~ 2180-06-27 18:49:00 (Discharge: HOME)\n3. 2180-07-23 12:35:00 ~ 2180-07-25 17:55:00 (Discharge: HOME)\n4. 2180-08-05 23:44:00 ~ 2180-08-07 17:50:00 (Discharge: HOSPICE)"
+  },
+  {
+    "id": "Q-03",
+    "type": "Structured (SQL)",
+    "question": "Calculate the exact length of stay (LOS) for patient 10000032's first admission (2180-05-06).",
+    "ground_truth": "Admitted: 2180-05-06 22:23:00, Discharged: 2180-05-07 17:15:00. LOS: 18 hours and 52 minutes (approx 0.79 days)."
+  },
+  {
+    "id": "Q-04",
+    "type": "Structured (SQL)",
+    "question": "How many distinct medications were prescribed to Patient 10000032 during their hospital stays?",
+    "ground_truth": "32 distinct drugs ."
+  },
+  {
+    "id": "Q-05",
+    "type": "Structured (SQL)",
+    "question": "Did Patient 10000032 receive prescriptions concurrent with her first admission (2180-05-06)?",
+    "ground_truth": "Yes, prescriptions start date correlates with the admission date 2180-05-06."
+  },
+  {
+    "id": "Q-06",
+    "type": "Structured (SQL)",
+    "question": "What is the gender and anchor age for patient 10039708?",
+    "ground_truth": "Gender: F, Anchor Age: 46, Anchor Year: 2138 "
+  },
+  {
+    "id": "Q-07",
+    "type": "Structured (SQL)",
+    "question": "What is the gender and anchor age for patient 10021487?",
+    "ground_truth": "Gender: M, Anchor Age: 43, Anchor Year: 2116"
+  },
+  {
+    "id": "Q-08",
+    "type": "Structured (SQL)",
+    "question": "How many total admissions did patient 10035631 have?",
+    "ground_truth": "The patient had 9 admissions."
+  },
+  {
+    "id": "Q-09",
+    "type": "Structured (SQL)",
+    "question": "What is the date range (first admission to last discharge) for patient 10002428?",
+    "ground_truth": "First Admission: 2155-07-14 19:15:00, Last Discharge: 2160-07-16 18:49:00."
+  },
+  {
+    "id": "Q-10",
+    "type": "Structured (SQL)",
+    "question": "How many distinct prescription drugs were ordered for patient 10003400?",
+    "ground_truth": "123 distinct drugs."
+  },
+  {
+    "id": "Q-11",
+    "type": "Structured (SQL)",
+    "question": "What was the most common admission type (e.g., EMERGENCY, URGENT, ELECTIVE) for patient 10000032? If there is a tie, return the one that is alphabetically first.",
+    "ground_truth": "EW EMER."
+  },
+  {
+    "id": "Q-12",
+    "type": "Structured (SQL)",
+    "question": "How many total distinct diagnosis codes (ICD) were assigned to patient 10018081?",
+    "ground_truth": "The patient had 58 distinct diagnosis codes."
+  },
+  {
+    "id": "Q-13",
+    "type": "Structured (SQL)",
+    "question": "How many distinct prescription drugs were ordered for patient 10035631?",
+    "ground_truth": "The patient had 178 distinct prescription drugs."
+  },
+  {
+    "id": "Q-14",
+    "type": "Structured (SQL)",
+    "question": "What is the time difference between the earliest recorded procedure and the latest discharge for patient 10000032?",
+    "ground_truth": "0 years, 92 days."
+  },
+  {
+    "id": "Q-15",
+    "type": "Structured (SQL)",
+    "question": "For patient 10018081, what is the least common admission type (excluding 'NEWBORN')? If there is a tie, return the one that is alphabetically first.",
+    "ground_truth": "The least common admission type is SURGICAL SAME DAY ADMISSION"
+  },
+  {
+    "id": "Q-16",
+    "type": "Structured (SQL)",
+    "question": "Calculate the exact length of stay (LOS) in hours for patient 10002428's second admission.",
+    "ground_truth": "LOS is 410 hours, 10 minutes."
+  }
+]

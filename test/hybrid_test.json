@@ -1,0 +1,92 @@
+[
+  {
+    "id": "Q-01",
+    "type": "Hybrid",
+    "question": "Patient 10000032 has 'Hepatitis C' (ICD 07054). Does the radiology report show complications associated with this diagnosis?",
+    "ground_truth": "Yes, complications are confirmed. The patient has chronic Hepatitis C (ICD 07054), and the radiology reports strongly support this by noting key sequelae: 'Cirrhosis', 'Ascites' (fluid buildup), and 'Splenomegaly' (enlarged spleen)."
+  },
+  {
+    "id": "Q-02",
+    "type": "Hybrid",
+    "question": "Check if Patient 10000032 has an ICD code for 'Ascites' (7895) given the radiology findings.",
+    "ground_truth": "Yes, both data points are consistent. Radiology reports confirm extensive ascites is present (fluid noted in multiple reports), and the specific ICD Code 7895 (Ascites) is correctly assigned to the patient's record in the diagnoses table."
+  },
+  {
+    "id": "Q-03",
+    "type": "Hybrid",
+    "question": "Patient 10000032 shows 'nodular opacities' in the Chest CT (10000032-RR-14). What does the radiologist think these represent?",
+    "ground_truth": "The radiologist interprets these nodular opacities as benign artifacts. They explicitly state the opacities 'most likely represent nipple shadows' rather than worrisome pulmonary nodules, effectively resolving the ambiguity."
+  },
+  {
+    "id": "Q-04",
+    "type": "Hybrid",
+    "question": "Does Patient 10000032 have a recorded ICD diagnosis for 'Hypertension'? If not, does the August 2180 chest radiograph (Note ID: 10000032-RR-46) suggest chronic hypertension based on heart size?",
+    "ground_truth": "No. The patient does NOT have an ICD code for Hypertension in the diagnoses table. This is supported by the radiology findings: The August 5, 2180 chest radiograph (Note ID: 10000032-RR-46) explicitly states 'The heart size is normal', showing no cardiomegaly that would suggest long-standing chronic hypertension."
+  },
+  {
+    "id": "Q-05",
+    "type": "Hybrid",
+    "question": "Patient 10000032 has 'Hepatitis C'. Is there evidence of 'Portal Hypertension' in the radiology reports?",
+    "ground_truth": "Yes. Portal Hypertension is a severe complication of Hepatitis C. The radiology reports confirm the classic signs: 'Cirrhosis', 'Ascites' (fluid in the abdomen), and 'Splenomegaly' (enlarged spleen)."
+  },
+  {
+    "id": "Q-06",
+    "type": "Hybrid",
+    "question": "Check if Patient 10000032 is on 'Heparin' (Anticoagulant). Is there any report of 'Hematoma' after her multiple paracentesis procedures?",
+    "ground_truth": "Yes, Heparin is prescribed. Post-procedure reports (post-paracentesis) state 'No retroperitoneal hematoma' or 'no fluid collection', confirming the absence of acute bleeding complications."
+  },
+  {
+    "id": "Q-07",
+    "type": "Hybrid",
+    "question": "Does Patient 10000032 have a diagnosis of 'Pneumonia'? Does the chest X-ray from May 6, 2180 (Note ID: 10000032-RR-14) support this?",
+    "ground_truth": "No. The patient does NOT have Pneumonia. This is confirmed by: (1) SQL: No ICD codes for Pneumonia found in the diagnoses table, (2) Radiology: The chest X-ray (Note ID: 10000032-RR-14) explicitly states 'There is no focal consolidation', which rules out acute pneumonia."
+  },
+  {
+    "id": "Q-08",
+    "type": "Hybrid",
+    "question": "Confirm the primary diagnosis for Patient 10000032 using ICD codes and Radiology validation.",
+    "ground_truth": "The Primary Diagnosis is Hepatitis C (ICD 07054). This is validated by radiology reports which show strong supportive evidence including Cirrhosis, Ascites, and Splenomegaly."
+  },
+  {
+    "id": "Q-09",
+    "type": "Hybrid",
+    "question": "Verify if Patient 10035631 has a diagnosis of 'Chronic kidney disease' (ICD 585). If confirmed, do any radiology reports mention 'hydronephrosis' or 'atrophy'?",
+    "ground_truth": "No. Patient 10035631 does NOT have ICD code 585 (CKD) in the diagnoses table. Additionally, radiology reports state 'views of the kidneys show no hydronephrosis' (Note ID: 10035631-RR-67, 10035631-RR-87), confirming the absence of both the diagnosis and the imaging findings."
+  },
+  {
+    "id": "Q-10",
+    "type": "Hybrid",
+    "question": "Patient 10002428's latest discharge location was to a 'Skilled Nursing Facility (SNF)'. Did their last radiology report mention any findings that would restrict mobility?",
+    "ground_truth": "The latest discharge location to a SKILLED NURSING FACILITY is verified. Radiology reports found no displaced fracture but often noted degenerative changes, which contribute to reduced mobility."
+  },
+  {
+    "id": "Q-11",
+    "type": "Hybrid",
+    "question": "Patient 10018081's primary diagnosis is 'Septicemia' (ICD 0389). Does the radiology report mention findings consistent with a focus of infection (e.g., abscess)?",
+    "ground_truth": "Yes, the ICD 0389 (Septicemia) is confirmed. While no definite abscess was found, the report states a 'new focus of infection is not excluded' and recommends follow-up, indicating diagnostic uncertainty."
+  },
+  {
+    "id": "Q-12",
+    "type": "Hybrid",
+    "question": "Patient 10039708's report mentions 'free fluid'. Does the context clarify if this is ascites (cirrhosis-related) or hemorrhage (bleeding)?",
+    "ground_truth": "Yes, the free fluid is ascites (cirrhosis-related). The report explicitly states 'mild abdominal and pelvic ascites' (Note ID: 10039708-RR-85) with no mention of hemorrhage or bleeding, confirming it is related to the patient's liver disease."
+  },
+  {
+    "id": "Q-13",
+    "type": "Hybrid",
+    "question": "Patient 10003400 has a diagnosis of 'A-fib' (ICD 42731). Check if any reports mention findings related to stroke or embolic events.",
+    "ground_truth": "Yes, the diagnosis (ICD 42731) is confirmed. Scans are negative for acute stroke or embolism, explicitly stating: 'no evidence of infarction, hemorrhage, edema, or mass'. This is a good triage indicator."
+  },
+  {
+    "id": "Q-14",
+    "type": "Hybrid",
+    "question": "Check if patient 10021487 has a diagnosis of 'Atherosclerosis' (ICD 4409) and if their reports mention 'calcification' in major vessels.",
+    "ground_truth": "No. The diagnosis of Atherosclerosis (ICD 4409) is NOT assigned to this patient. Although reports contain keywords like 'calcification', the absence of the official ICD code makes the primary premise fail."
+  },
+  {
+    "id": "Q-15",
+    "type": "Hybrid",
+    "question": "Patient 10018081 has a diagnosis of 'Malignant neoplasm of lung' (ICD 1629). Does the radiology report mention a primary tumor mass or metastasis?",
+    "ground_truth": "No. The ICD 1629 code (Neoplasm) is NOT found in the patient's chart. Furthermore, radiology reports generally note 'age-related cerebral atrophy', rather than acute masses or metastasis."
+  }
+]

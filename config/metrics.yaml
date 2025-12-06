@@ -1,0 +1,13 @@
+avg_los:
+  description: "Average Length of Stay (in days)"
+  sql_template: "AVG(JULIANDAY(dischtime) - JULIANDAY(admittime))"
+  grain: ["admission_type", "diagnosis"]
+
+mortality_rate:
+  description: "Percentage of admissions resulting in death inside the hospital"
+  sql_template: "CAST(SUM(hospital_expire_flag) AS FLOAT) * 100.0 / COUNT(*)"
+  grain: ["admission_type", "race"]
+
+readmission_count:
+  description: "Count of unique admissions"
+  sql_template: "COUNT(DISTINCT hadm_id)"

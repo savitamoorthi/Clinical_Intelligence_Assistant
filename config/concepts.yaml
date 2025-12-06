@@ -1,0 +1,40 @@
+diagnosis:
+  description: "ICD-9/10 diagnosis associated with an admission"
+  related_tables: ["admissions", "diagnoses_icd", "d_icd_diagnoses"]
+
+procedure:
+  description: "Clinical procedure performed during stay"
+  related_tables: ["admissions", "procedures_icd", "d_icd_procedures"]
+
+medication:
+  description: "Prescribed drugs"
+  related_tables: ["prescriptions"]
+
+emergency_admission:
+  description: "Admissions classified as emergency or urgent"
+  related_tables: ["admissions"]
+  filter_logic: "admission_type IN ('EW EMER.', 'DIRECT EMER.', 'URGENT')"
+
+observation_admission:
+  description: "Patients admitted for observation only"
+  related_tables: ["admissions"]
+  filter_logic: "admission_type IN ('EU OBSERVATION', 'OBSERVATION ADMIT', 'DIRECT OBSERVATION', 'AMBULATORY OBSERVATION')"
+
+elective_admission:
+  description: "Planned or scheduled admissions"
+  related_tables: ["admissions"]
+  filter_logic: "admission_type IN ('ELECTIVE', 'SURGICAL SAME DAY ADMISSION')"
+
+drug:
+  description: "Medication orders and prescriptions"
+  related_tables: ["prescriptions"]
+  synonyms: ["medication", "meds", "prescription", "rx"]
+  usage_guide: |
+    - Table: `prescriptions`
+    - Date Columns: Use `starttime` and `stoptime`. (DO NOT use 'startdate' or 'enddate').
+    - Drug Name: Use column `drug`.
+    - Date Logic: SQLite dates are strings (YYYY-MM-DD). Use DATE(starttime) comparisons.
+
+prescription:
+  description: "See drug"
+  usage_guide: "See instructions for 'drug'."

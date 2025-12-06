@@ -19,11 +19,9 @@ The **Clinical Intelligence Assistant** is an advanced multi-agent AI system des
 
 - **Hybrid Retrieval System**: Combines graph-based schema navigation, semantic search, and cross-encoder reranking for optimal information retrieval
 
-- **Medical Domain Optimization**: 
-  - ICD code fuzzy matching
-  - Medical concept mapping
-  - Clinical metrics awareness
-  - Patient context retention across multi-turn conversations
+- **Graph-Based Schema Retrieval**: NetworkX-powered database schema graph with hybrid BM25 + Gemini embedding search for context-aware table/column discovery
+- **Medical Concept & Metrics Mapping**: YAML-based domain knowledge (concepts.yaml, metrics.yaml) for admission types, procedures, medications, and clinical calculations
+- **Patient Context Retention**: Stateful conversation tracking across multi-turn dialogues with intelligent patient/admission ID classification and filter persistence
 
 - **Evaluation Framework**: Comprehensive testing using RAGAS metrics (faithfulness, answer relevance, context precision)
 

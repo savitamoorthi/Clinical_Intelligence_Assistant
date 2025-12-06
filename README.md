@@ -2,11 +2,11 @@
 
 **Master of Science in Applied Data Science Capstone Project**  
 **University of Chicago**  
-**Author:** Savita Moorthi
+**Team:** Savita Moorthi, Yeochan Youn, Gyujin Seo, Aadya Nair
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 The **Clinical Intelligence Assistant** is an advanced multi-agent AI system designed to answer complex clinical queries by orchestrating specialized retrieval and generation workflows across structured and unstructured electronic health record (EHR) data. This system leverages state-of-the-art LLMs, vector databases, and agentic AI architectures to provide evidence-based clinical insights.
 
@@ -14,7 +14,7 @@ The **Clinical Intelligence Assistant** is an advanced multi-agent AI system des
 
 - **Multi-Agent Architecture**: Orchestrated workflow using LangGraph with three specialized agents:
   - **EHR Agent**: Text-to-SQL system for querying structured MIMIC-III database
-  - **Reports Agent**: Vector-based retrieval for unstructured clinical documents (radiology reports, physician notes)
+  - **Reports Agent**: Vector-based retrieval for unstructured clinical documents (radiology reports)
   - **Supervisor Agent**: Intelligent coordinator managing agent collaboration and response synthesis
 
 - **Hybrid Retrieval System**: Combines graph-based schema navigation, semantic search, and cross-encoder reranking for optimal information retrieval
@@ -31,7 +31,7 @@ The **Clinical Intelligence Assistant** is an advanced multi-agent AI system des
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -84,7 +84,7 @@ The **Clinical Intelligence Assistant** is an advanced multi-agent AI system des
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Clinical_Intelligence_Assistant/
@@ -133,7 +133,7 @@ Clinical_Intelligence_Assistant/
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 
@@ -157,7 +157,7 @@ cd Clinical_Intelligence_Assistant
 python3 -m venv .venv
 
 # Activate virtual environment
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate 
 
 # Install dependencies
 pip install -r requirements.txt
@@ -179,8 +179,6 @@ ZILLIZ_URI=your-zilliz-uri-here
 ZILLIZ_TOKEN=your-zilliz-token-here
 ```
 
-⚠️ **Security Note:** Never commit your `.env` file to version control!
-
 ### Step 4: Frontend Setup
 
 ```bash
@@ -191,7 +189,7 @@ cd ..
 
 ---
 
-## 🎯 Usage
+## Usage
 
 ### Running the Backend Server
 
@@ -238,7 +236,7 @@ python agent/reports_agent.py
 
 ---
 
-## 🧪 Evaluation
+## Evaluation
 
 The project includes comprehensive evaluation scripts using RAGAS metrics:
 
@@ -266,7 +264,7 @@ Results are saved as CSV files in the `test/` directory.
 
 ---
 
-## 📊 Sample Queries
+## Sample Queries
 
 ### Structured Data (EHR Agent)
 ```
@@ -291,7 +289,7 @@ Results are saved as CSV files in the `test/` directory.
 
 ---
 
-## 🔒 Security & Privacy
+## Security & Privacy
 
 - **PII Masking**: Sensitive information is automatically redacted in outputs
 - **Environment Variables**: API keys stored securely in `.env` (gitignored)
@@ -302,7 +300,7 @@ Results are saved as CSV files in the `test/` directory.
 
 ---
 
-## 🛠️ Development
+## Development
 
 ### Adding New Medical Concepts
 
@@ -329,56 +327,7 @@ Each agent (`ehr_agent.py`, `reports_agent.py`, `supervisor.py`) is built using 
 2. Adding the node to the workflow
 3. Configuring edges and routing logic
 
----
-
-## 📝 Key Dependencies
-
-| Package | Purpose |
-|---------|---------|
-| `langchain` | LLM orchestration framework |
-| `langgraph` | Agentic workflow graphs |
-| `openai` | GPT-4 API integration |
-| `google-generativeai` | Gemini LLM integration |
-| `pymilvus` | Vector database client |
-| `sentence-transformers` | Embedding models |
-| `fastapi` | REST API framework |
-| `react` | Frontend framework |
-| `ragas` | LLM evaluation metrics |
-| `networkx` | Graph-based schema retrieval |
-
----
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Issue:** `ModuleNotFoundError: No module named 'langchain'`
-- **Solution:** Ensure virtual environment is activated and run `pip install -r requirements.txt`
-
-**Issue:** API key errors
-- **Solution:** Verify `.env` file exists and contains valid keys
-
-**Issue:** Database not found
-- **Solution:** Ensure `data/mimic.db` exists in the project directory
-
-**Issue:** Frontend won't start
-- **Solution:** Run `npm install` in the `frontend/` directory
-
-**Issue:** CORS errors in frontend
-- **Solution:** Verify backend is running on port 8000 and frontend on port 3000
-
----
-
-## 📚 References
-
-- **MIMIC-III Database**: Johnson et al., "MIMIC-III, a freely accessible critical care database"
-- **LangGraph Documentation**: https://langchain-ai.github.io/langgraph/
-- **RAGAS Framework**: https://docs.ragas.io/
-- **Sentence Transformers**: https://www.sbert.net/
-
----
-
-## 🎓 Academic Context
+## Academic Context
 
 This project was developed as a capstone for the **Master of Science in Applied Data Science** program at the **University of Chicago**. It demonstrates advanced applications of:
 
@@ -391,23 +340,13 @@ This project was developed as a capstone for the **Master of Science in Applied 
 
 ---
 
-## 📄 License
+## License
 
-This is an academic project for educational purposes. The MIMIC-III dataset is used under appropriate data use agreements. See the [MIMIC-III documentation](https://mimic.mit.edu/) for data usage terms.
-
----
-
-## 👤 Author
-
-**Savita Moorthi**  
-Master of Science in Applied Data Science  
-University of Chicago
-
-GitHub: [@savitamoorthi](https://github.com/savitamoorthi)
+This is an academic project for educational purposes.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - University of Chicago MSADS faculty and advisors
 - MIT Laboratory for Computational Physiology (MIMIC-III dataset)
@@ -416,9 +355,10 @@ GitHub: [@savitamoorthi](https://github.com/savitamoorthi)
 
 ---
 
-## 📮 Contact
+## Contact
 
 For questions or collaboration opportunities, please reach out via GitHub issues or pull requests.
+Contact the team through - savitamoorthi@outlook.com
 
 ---
 

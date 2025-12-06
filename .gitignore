@@ -312,3 +312,4 @@ docs/.buildinfo
 config.local.yaml
 config.override.yaml
 *.local.yaml
+requirements_old.txt
